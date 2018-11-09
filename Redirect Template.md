@@ -6,13 +6,13 @@
     <title>Title</title>
 
     <script>
-        window.location.href = "https://www.tubebuddy.com/metrix";
+        window.location.href = "https://www.example.com";
     </script>
 
   </head>
   <body>
 
-    <p><a href="https://www.tubebuddy.com/metrix">Redirect</a></p>
+    <p><a href="https://www.example.com">Redirect</a></p>
 
   </body>
 </html>
