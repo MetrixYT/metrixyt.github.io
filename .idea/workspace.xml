@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9be1b41-4a35-43ca-a47f-7f38fe108055" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/memes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memes/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memes/posts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memes_v1/index.html" afterDir="false" />
+    <list default="true" id="f9be1b41-4a35-43ca-a47f-7f38fe108055" name="Default" comment="Added new memes page to /memes&#10;&#10;old memes page moved to /memes_v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/memes/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memes/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/memes/posts.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Eddie Federmeyer &lt;eddiefedermeyer@yahoo.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1W0KurpWkdgamVPORX62mXGe7a3" />
   <component name="ProjectLevelVcsManager">
@@ -102,8 +106,16 @@
       <workItem from="1503186718082" duration="138000" />
       <workItem from="1503186865796" duration="1682000" />
       <workItem from="1578281302112" duration="63000" />
-      <workItem from="1578281579990" duration="866000" />
+      <workItem from="1578281579990" duration="3823000" />
     </task>
+    <task id="LOCAL-00001" summary="Added new memes page to /memes&#10;&#10;old memes page moved to /memes_v1">
+      <created>1578282498843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578282498843</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,10 +142,30 @@
       <collection />
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added new memes page to /memes&#10;&#10;old memes page moved to /memes_v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new memes page to /memes&#10;&#10;old memes page moved to /memes_v1" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="199" key="#JSON" timestamp="1578282103574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="199" key="#JSON/0.0.1920.1080@0.0.1920.1080" timestamp="1578282103574" />
+    <state x="615" y="135" key="CommitChangelistDialog2" timestamp="1578282497280">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="615" y="135" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578282497280" />
+    <state x="184" y="95" key="DiffContextDialog" timestamp="1578282509127">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="184" y="95" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578282509127" />
+    <state x="810" y="251" key="RollbackChangesDialog" timestamp="1578284974785">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="810" y="251" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578284974785" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1578282511730">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578282511730" />
   </component>
 </project>

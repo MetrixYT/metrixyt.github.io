@@ -86,7 +86,7 @@ function makeNewPost(token, newPost64, oldPostSHA) {
 
 function makeBody(token, newPost64, oldPostSHA) {
     const tempJSON = {
-        "message": "New Article!",
+        "message": "New Meme!",
         "content": newPost64,
         "sha": oldPostSHA
     };

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Dynamic Blog!</title>
@@ -12,7 +13,7 @@
                 .then(r => r.json())
                 .then(function(d) {
                     const oldPostContentDecoded = JSON.parse(atob(d.content));
-                    console.log("Old Post Decoded: " + JSON.stringify(oldPostContentDecoded));
+                    // console.log("Old Post Decoded: " + JSON.stringify(oldPostContentDecoded));
 
                     let posts = document.getElementById("posts");
 
@@ -23,18 +24,13 @@
 
                     oldPostContentDecoded.articles.forEach((article) => {
                         let post = document.createElement("DIV");
-                        let title = document.createElement("P");
                         let body = document.createElement("P");
-                        let date = document.createElement("P");
                         let br = document.createElement("BR");
 
-                        title.innerText = article.title;
-                        body.innerText = article.body;
-                        date.innerText = article.date;
+                        console.log(("Meme: " + article.title) + "br" + ("Description: " + article.body) + "\n" + ("Date Posted: " + article.date));
+                        body.innerHTML = ("Meme: ".bold() + article.title) + "<br>" + ("Description: ".bold() + article.body) + "<br>" + ("Date Posted: ".bold() + article.date.substring(0, article.date.indexOf(" GMT")));
 
-                        post.appendChild(title);
                         post.appendChild(body);
-                        post.appendChild(date);
                         post.appendChild(br);
                         posts.appendChild(post);
                     })
@@ -43,29 +39,43 @@
         }
     </script>
 
+    <style>
+        input, textarea {
+            width: 45%;
+            resize: none;
+        }
+    </style>
+
 </head>
+
 <body onload="loadPage()">
 
-    <label>
-        <textarea rows="1" cols="150" placeholder="Add a Title!" id="title"></textarea>
-    </label>
+    <form>
+        <label>
+            <input maxlength="512" placeholder="Meme" id="title" />
+        </label>
+        <br>
+        <label>
+            <textarea maxlength="512" placeholder="Type Your Description Here!" id="article"></textarea>
+        </label>
+        <br>
+        <label>
+            <input maxlength="512" placeholder="Username" id="username" />
+        </label>
+        <br>
+        <label>
+            <input maxlength="512" type="password" placeholder="Password" id="password" />
+        </label>
+    </form>
+
     <br>
-    <label>
-        <textarea rows="20" cols="150" placeholder="Type Your Article Here!" id="article"></textarea>
-    </label>
-    <br>
-    <label>
-        <textarea rows="1" cols="150" placeholder="Username" id="username"></textarea>
-    </label>
-    <br>
-    <label>
-        <textarea rows="1" cols="150" placeholder="Password" id="password"></textarea>
-    </label>
-    <br>
+
     <button onclick="init()">Post!</button>
+
     <br>
     <br>
     <br>
+
     <div id="posts">
 
     </div>
