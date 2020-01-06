@@ -1,15 +1,74 @@
-<h1>Memes:</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Blog!</title>
 
-<p>
-Meme: "HEY!" Description: At McDonald's in Chicago (Our first visit) we parked our bikes and locked them to one of the 2 poles outside. Meanwhile while we were eating
+    <script src="post.js"></script>
 
-Meme: "TIT" Description: At random times me and Nick will just yell "TIT" outside for no reason. (Original idea for this was from impractical jokers).
+    <script>
+        function loadPage() {
+            fetch("https://api.github.com/repos/MetrixYT/metrixyt.github.io/contents/memes/posts.json")
+                .then(r => r.json())
+                .then(function(d) {
+                    const oldPostContentDecoded = JSON.parse(atob(d.content));
+                    console.log("Old Post Decoded: " + JSON.stringify(oldPostContentDecoded));
 
-Meme: "What are you doing with my bag?"
-  
-Meme: "Dont be weird"
-  
-Meme: "Om"  8-28-18 
+                    let posts = document.getElementById("posts");
 
+                    // Must empty the DOM any time there is a new post added
+                    while (posts.hasChildNodes()) {
+                        posts.removeChild(posts.firstChild);
+                    }
 
-</p>
+                    oldPostContentDecoded.articles.forEach((article) => {
+                        let post = document.createElement("DIV");
+                        let title = document.createElement("P");
+                        let body = document.createElement("P");
+                        let date = document.createElement("P");
+                        let br = document.createElement("BR");
+
+                        title.innerText = article.title;
+                        body.innerText = article.body;
+                        date.innerText = article.date;
+
+                        post.appendChild(title);
+                        post.appendChild(body);
+                        post.appendChild(date);
+                        post.appendChild(br);
+                        posts.appendChild(post);
+                    })
+
+                });
+        }
+    </script>
+
+</head>
+<body onload="loadPage()">
+
+    <label>
+        <textarea rows="1" cols="150" placeholder="Add a Title!" id="title"></textarea>
+    </label>
+    <br>
+    <label>
+        <textarea rows="20" cols="150" placeholder="Type Your Article Here!" id="article"></textarea>
+    </label>
+    <br>
+    <label>
+        <textarea rows="1" cols="150" placeholder="Username" id="username"></textarea>
+    </label>
+    <br>
+    <label>
+        <textarea rows="1" cols="150" placeholder="Password" id="password"></textarea>
+    </label>
+    <br>
+    <button onclick="init()">Post!</button>
+    <br>
+    <br>
+    <br>
+    <div id="posts">
+
+    </div>
+
+</body>
+</html>
